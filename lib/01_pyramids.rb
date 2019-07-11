@@ -1,3 +1,4 @@
+
 def half_pyramid 
 
 puts "Entrez un nombre entre 1 et 25"
@@ -23,6 +24,7 @@ end
 
 end 
 
+half_pyramid 
 
 def full_pyramid 
 
@@ -45,7 +47,7 @@ end
 
 end 
 
-
+full_pyramid
 
 def wtf_pyramid 
 
