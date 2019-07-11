@@ -1,41 +1,96 @@
-def half_pyramid
+def half_pyramid 
 
-	puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?"
-	num = gets.chomp.to_i
+puts "Entrez un nombre entre 1 et 25"
+etage = gets.chomp.to_i
 
-	i = num 
-	ligne = 1 
-	b = '# ' 
-	c = " "
-	caractere = 1
+if etage > 25
+		puts "Veuillez choisir un nombre entre 1 et 25"
 
+else
 
-	while ligne <= i 
+	etage.downto(1) do |n|
+  	(n - 1).times do
+   	 print ' '
+  	end
 
-        puts (c * (i-caractere)) +( b * caractere ) 
-        ligne = ligne + 1 
-        caractere = caractere + 1 
+  	(etage - n + 1).times do
+   	 print '#'
+ 	 end
+
+  	puts ''
 	end
+end	
+
 end 
 
 
-def wtf_pyramid
+def full_pyramid 
+
+puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?"
+nb = gets.chomp.to_i
+
+puts "Voici la pyramide :"
+cpt = 1
+nb.times do
+    nb.times do
+        print " "
+    end
+    cpt.times do
+        print "#"
+    end
+    cpt += 2
+    nb -= 1
+    puts
+end
+
 end 
 
-def pair?
 
-	print "donne un étage" 
-	num = gets.chomp.to_i  
-	if  num % 2  != 0
-		num = (num.to_f / 2) + 0.5
-	else 
-		num = num / 2
 
-	end 
+def wtf_pyramid 
 
-	#definitions des autres variables 
-	while 
-		
-	end
-end 
+puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?"
+i = gets.chomp.to_i
+
+cpt = 1 
+
+
+    if i % 2 == 0
+        puts "Veuillez entrer une variable impaire ! Bordel !"
+    else 
+    	a = (i /2) 
+    	b = (i / 2) + 1  
+    
+        a.times do 
+        	i.times do
+        		print " "
+    		end
+    		cpt.times do
+        		print "#"
+    		end
+    		puts 
+    		cpt += 2
+    		i -= 1
+        end
+
+		 
+
+        b.times do
+     		i.times do
+        		print " "
+    		end
+    		cpt.times do
+        		print "#"
+    		end
+    		puts 
+    		cpt -= 2
+    		i += 1
+        end
+    end
+end  
+
+wtf_pyramid
+
+
+
 
