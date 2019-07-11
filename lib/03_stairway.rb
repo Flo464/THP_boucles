@@ -40,9 +40,9 @@ def aveage_finish_time
 	tab = 0
 	100.times do
 		jeu
-		tab = tab + jet
+		tab = tab.to_f + jet
 	end
-	print "MOYENNE #{tab/100}\n"
+	print "MOYENNE #{tab / 100}\n"
 end
 
 jeu
