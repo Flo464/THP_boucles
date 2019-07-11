@@ -1,33 +1,32 @@
-def sign_up
- 	puts "Rentrez un mot de passe"
- 	mdp_1 =gets.chomp
-  	return mdp_1
+def signup
+    puts "enter your password"
+    password = gets.chomp
+    return
 end
 
 def login
- 	puts "Retapez votre mot de passe"
- 	mdp_2=gets.chomp
-  	return mdp_2
+    puts "login with your password"
+    input = gets.chomp
+    if input == signup(password)
+    welcome_screen
+    else
+    begin
+        retries ||= 0
+        rescue
+        retry if input != signup(password)
+        login
+    end
+    end
 end
 
-def correction(mdp_1, mdp_2)
-  while mdp_1 != mdp_2
-  	puts "Erreur, ré-essayez."
-  	mdp_2 = gets.chomp
-   end
-end
-
-def correction2(mdp_1, mdp_2)
-  if mdp_1 = mdp_2
-  	puts "Correct."
-   end
+def welcome_screen
+    puts "welcome user!"
 end
 
 def perform
-	mdp_1 = sign_up
-	mdp_2 = login
-	correction(mdp_1, mdp_2) 
-	correction2(mdp_1, mdp_2) 
-end
+    signup
+    login
+    welcome_screen
+    end
 
 perform
