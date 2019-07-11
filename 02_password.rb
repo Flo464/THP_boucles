@@ -28,7 +28,6 @@ def perform
 	mdp_2 = login
 	correction(mdp_1, mdp_2) 
 	correction2(mdp_1, mdp_2) 
-
 end
 
 perform
